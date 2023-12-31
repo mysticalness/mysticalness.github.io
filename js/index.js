@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
  });
 
 function summeryPage() {
-  location.href = '/pages/bookSummaries.html';
+  location.href = '/pages/bookSummary.html';
 }
 
  let boxObserver = new ResizeObserver((entries,observe) => {
@@ -28,7 +28,9 @@ function summeryPage() {
 
 function targetMenu(entry, width) {
   if(width < 720)
-    entry.target.innerHTML = '<div id="bookSummeries">Summery</div><div id="techDocument">Document</div><div id="aboutMe">Info</div>';
+    entry.target.innerHTML = `<div id="bookSummary" onclick="summeryPage()"><span>Summary</span></div>
+                              <div id="techDocument"><span>Document</span></div>
+                              <div id="aboutMe"><span>Info</span></div>`;
   else
     entry.target.innerHTML = menuInnerHtml;
 }
