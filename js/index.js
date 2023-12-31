@@ -1,15 +1,21 @@
 let menuInnerHtml;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const bookSummeries = document.querySelector("#bookSummeries");
-  bookSummeries.onclick = function() {
-    location.href = '/pages/bookSummaries.html';
-  }
 
+  const clickPhoto = document.querySelector("#profilePhoto");
+  clickPhoto.onclick = function () {
+    clickHeartEvent();
+  };
+  
   const box = document.querySelector('.menu');
   menuInnerHtml = box.innerHTML;
   boxObserver.observe(box);
+
  });
+
+function summeryPage() {
+  location.href = '/pages/bookSummaries.html';
+}
 
  let boxObserver = new ResizeObserver((entries,observe) => {
   for(let entry of entries){
@@ -22,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function targetMenu(entry, width) {
   if(width < 720)
-    entry.target.innerHTML = '<div>Summery</div><div>Document</div><div>Info</div>';
+    entry.target.innerHTML = '<div id="bookSummeries">Summery</div><div id="techDocument">Document</div><div id="aboutMe">Info</div>';
   else
     entry.target.innerHTML = menuInnerHtml;
 }

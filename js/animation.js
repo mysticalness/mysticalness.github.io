@@ -1,10 +1,3 @@
-window.onload = function () {
-  const clickPhoto = document.querySelector("#profilePhoto");
-  clickPhoto.onclick = function () {
-    clickHeartEvent();
-  };
-};
-
 function clickHeartEvent() {
   const canvas = document.createElement("canvas");
   canvas.style.position = "fixed";
