@@ -9,14 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const box = document.querySelector('.menu');
   menuInnerHtml = box.innerHTML;
   boxObserver.observe(box);
-  
-
  });
 
  let boxObserver = new ResizeObserver((entries,observe) => {
   for(let entry of entries){
     const cr = entry.contentRect;
-    const targetName = entry.target.id;
+    const targetName = entry.target.className;
     if(targetName == 'menu')
       targetMenu(entry,cr.width);
   }
