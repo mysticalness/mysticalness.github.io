@@ -28,9 +28,9 @@ function summeryPage() {
 
 function targetMenu(entry, width) {
   if(width < 720)
-    entry.target.innerHTML = `<div id="bookSummary" onclick="summeryPage()"><span>Summary</span></div>
-                              <div id="techDocument"><span>Document</span></div>
-                              <div id="aboutMe"><span>Info</span></div>`;
+    entry.target.innerHTML = `<div id="bookSummary" onclick="summeryPage()">Summary</div>
+                              <div id="techDocument">Document</div>
+                              <div id="aboutMe">Info</div>`;
   else
     entry.target.innerHTML = menuInnerHtml;
 }
