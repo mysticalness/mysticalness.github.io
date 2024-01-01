@@ -1,0 +1,53 @@
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 10% 85% 5%;
+  color: #D9D9D9;
+  word-break: break-all;
+}
+
+.bookList {
+  display: grid;
+  grid-template-columns: 85% 7% 8%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin: 20px;
+  border: 2px solid #D9D9D9;
+  border-radius: 12px;
+  font-weight: 800;
+
+  & div {
+    padding: 10px;
+    border-bottom: 2px solid #D9D9D9;
+    border-right: 2px solid #D9D9D9;
+  }
+
+  & :nth-child(3n+1) {
+    border-right: none;
+  }
+
+  & :nth-child(3n) {
+    border-right: none;
+  }
+
+  & :nth-child(3n+2) {
+    display: flex;
+    align-items: end;
+    font-size: 1.5em;
+  }
+
+  & :nth-child(3n+2) span {
+    width: 100%;
+    font-size: 1.2em;
+    text-align: right;
+
+  }
+
+  & .fourth_items {
+    border-bottom: none;
+  }
+
+}
+
+.paging {
+  text-align: center;
+}
