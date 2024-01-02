@@ -51,13 +51,13 @@ body {
 
   & .thisPage {
     position: absolute;
-    background-color: #81A100;
-    opacity: 70%;
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
-    top: 3px;
-    margin-left: 45px;
+    background: linear-gradient(90deg, rgba(255,185,67,1) 0%, rgba(255,255,255,0) 100%);
+    opacity: 50%;
+    width: 100px;
+    height: 20px;
+    top: 11px;
+    margin-left: -10px;
+    border-radius: 10px;
     visibility: hidden;
   }
 }
