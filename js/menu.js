@@ -1,7 +1,8 @@
 let menuInnerHtml;
 let pageName;
+let time;
 
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function(){
   includeHTML();
 
   pageName = location.pathname;
@@ -11,8 +12,12 @@ window.addEventListener("load", function () {
     sum += i;
   }
   const end = window.performance.now();
-  const time = end - start;
+  time = end - start;
 
+ });
+ 
+window.addEventListener("load", function () {
+  
   setTimeout(() => {
     const box = document.querySelector(".menu");
     menuInnerHtml = box.innerHTML;
