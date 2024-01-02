@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
 });
 
 function circle(pageName) {
-  if (pageName.indexOf("bookSummary.html") > -1 || pageName.indexOf("bookDetail.html")) {
+  if (pageName.indexOf("bookSummary.html") > -1 || pageName.indexOf("bookDetail.html") > -1) {
     const className = document.querySelector(".thisPage.bookCircle");
     className.style.visibility = "visible";
   }
