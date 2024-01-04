@@ -43,7 +43,7 @@
   & .roundBox {
     border: 2px solid #D9D9D9;
     display: inline-block;
-    width: calc((100% - 91px) / 5);
+    width: calc((100% - 95px) / 5);
     margin-right: 15px;
     height: 100%;
   }
