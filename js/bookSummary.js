@@ -6,7 +6,7 @@ fetch("/json/bookSummary.json") //json파일 읽어오기
     let html = "";
     data.forEach((element) => {
       html += `<div class="_items ${element.part}">
-                  <a href="/pages/bookDetail.html?${element.bookName}">
+                  <a href="/pages/bookRound.html?book=${element.bookName}">
                     <div class="bookName">${element.bookName}</div>
                   </a>
                   <div class="duration">${element.duration}</div>

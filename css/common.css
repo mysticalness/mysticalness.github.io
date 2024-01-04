@@ -61,3 +61,7 @@ body {
     visibility: hidden;
   }
 }
+
+.paging {
+  text-align: center;
+}
