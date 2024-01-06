@@ -2,7 +2,7 @@ let menuInnerHtml;
 let pageName;
 let time;
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
   includeHTML();
 
   pageName = location.pathname;
@@ -13,21 +13,22 @@ document.addEventListener("DOMContentLoaded", function(){
   }
   const end = window.performance.now();
   time = end - start;
+});
 
- });
- 
 window.addEventListener("load", function () {
-  
   setTimeout(() => {
     const box = document.querySelector(".menu");
     menuInnerHtml = box.innerHTML;
     boxObserver.observe(box);
   }, time * 500);
-
 });
 
 function circle(pageName) {
-  if (pageName.indexOf("bookSummary.html") > -1 || pageName.indexOf("bookRound.html") > -1) {
+  if (
+    pageName.indexOf("bookSummary.html") > -1 ||
+    pageName.indexOf("bookRound.html") > -1 ||
+    pageName.indexOf("bookContent.html") > -1
+  ) {
     const className = document.querySelector(".thisPage.bookCircle");
     className.style.width = "150px";
     className.style.visibility = "visible";
