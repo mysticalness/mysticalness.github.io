@@ -1,3 +1,4 @@
+
 window.onload = function () {
   const urlParams = new URL(location.href).searchParams;
   const name = urlParams.get("book");
@@ -6,17 +7,21 @@ window.onload = function () {
   document.getElementById("number").textContent = `${number}.`;
 
   const txtPath = `/text/${name}/${number}`;
-  const txt = loadFile(txtPath);
-  document.getElementById("writtenSummary").textContent = txt;
+
+  let xmlhttp = new XMLHttpRequest();
+  xmlhttp.onload = loadFile;
+  xmlhttp.open("GET", txtPath);
+  xmlhttp.send();
+
+  loadFile();
+
 };
 
-function loadFile(filePath) {
+
+function loadFile() {
   let result = null;
-  let xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", filePath, false);
-  xmlhttp.send();
-  if (xmlhttp.status == 200) {
-    result = xmlhttp.responseText;
-  }
-  return result;
+  if (this.status == 200) {
+    result = this.responseText;
+    document.getElementById("writtenSummary").textContent = result;
+  } 
 }
