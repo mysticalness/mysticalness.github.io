@@ -1,5 +1,5 @@
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URL(location.href).searchParams;
   const name = urlParams.get("book");
   const number = urlParams.get("number");
@@ -15,7 +15,7 @@ window.onload = function () {
 
   loadFile();
 
-};
+});
 
 
 function loadFile() {
