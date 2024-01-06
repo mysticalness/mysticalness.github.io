@@ -16,8 +16,7 @@ fetch("/json/bookRound.json") //json파일 읽어오기
 
     let html = "";
     data.forEach((element) => {
-      const bookName = document.getElementById("thisBookName").textContent;
-      html += `<div class="roundBox" onclick="nextContent('${bookName}','${element.number}')">
+      html += `<div class="roundBox" onclick="nextContent('${element.bookName}','${element.number}')">
               <div class="roundCount">`;
       if (element.number != "") html += `${element.number}일차 `;
       html += `</div>

@@ -2,42 +2,52 @@
   "bookRound": [
     {
       "number" : "01",
+      "bookName" : "타입으로 견고하게 다형성으로 유연하게",
       "content" : "1.1 타입 검사의 정의와 필요성 <br> 1.2 정적 타입 언어"
     },
     {
       "number" : "02",
+      "bookName" : "",
       "content" : ""
     },
     {
       "number" : "03",
+      "bookName" : "",
       "content" : ""
     },
     {
       "number" : "04",
+      "bookName" : "",
       "content" : ""
     },
     {
       "number" : "05",
+      "bookName" : "",
       "content" : ""
     },
     {
       "number" : "",
+      "bookName" : "",
       "content" : ""
     },
     {
       "number" : "",
+      "bookName" : "",
       "content" : ""
     },
     {
       "number" : "",
+      "bookName" : "",
       "content" : ""
     },
     {
       "number" : "",
+      "bookName" : "",
       "content" : ""
     },
     {
       "number" : "",
+      "bookName" : "",
       "content" : ""
     }
   ]
