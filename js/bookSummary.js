@@ -2,7 +2,7 @@ fetch("/json/bookSummary.json") //json파일 읽어오기
   .then((response) => response.json()) //읽어온 데이터를 json으로 변환
   .then((json) => {
     data = json.bookInfo_1; //json에 있는 items만 받아오기
-
+    console.log(data);
     let html = "";
     data.forEach((element) => {
       html += `<div class="_items ${element.part}">
@@ -16,7 +16,9 @@ fetch("/json/bookSummary.json") //json파일 읽어오기
               </div>
               <div class="_items ${element.part}">
                 <a class="bookImgLink" href="${element.bookImgLink}" target="_blank">
-                <img class="bookImg" src="${element.bookImg}">
+                <img class="bookImg"`;
+      if (element.bookImg != "") html += ` src="${element.bookImg}"`;
+      html += `>
                 </a>
               </div>`;
     });
