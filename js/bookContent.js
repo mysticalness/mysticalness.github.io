@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
   getUrlInfo().then((res) => {
     const txtPath = `/text/${res}`;
     let xmlhttp = new XMLHttpRequest();
@@ -8,7 +8,7 @@ window.onload = function () {
 
     loadFile();
   });
-};
+});
 
 function getUrlInfo() {
   return new Promise((resolve, reject) => {
