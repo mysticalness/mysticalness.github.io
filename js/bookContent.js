@@ -1,19 +1,29 @@
 window.onload = function () {
-  const urlParams = new URL(location.href).searchParams;
-  const name = urlParams.get("book");
-  const number = urlParams.get("number");
-  document.getElementById("thisBookName").textContent = `${name}`;
-  document.getElementById("number").textContent = `${number}.`;
+  getUrlInfo().then((res) => {
+    const txtPath = `/text/${res}`;
+    let xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = loadFile;
+    xmlhttp.open("GET", txtPath);
+    xmlhttp.send();
 
-  const txtPath = `/text/${name}/${number}`;
-
-  let xmlhttp = new XMLHttpRequest();
-  xmlhttp.onload = loadFile;
-  xmlhttp.open("GET", txtPath);
-  xmlhttp.send();
-
-  loadFile();
+    loadFile();
+  });
 };
+
+function getUrlInfo() {
+  return new Promise((resolve, reject) => {
+    const urlParams = new URL(location.href).searchParams;
+    const name = urlParams.get("book");
+    const number = urlParams.get("number");
+    if (name != "" && number != "") {
+      document.getElementById("thisBookName").textContent = `${name}`;
+      document.getElementById("number").textContent = `${number}.`;
+      resolve(`${name}/${number}`);
+    } else {
+      reject("failed");
+    }
+  });
+}
 
 function loadFile() {
   let result = null;
