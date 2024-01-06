@@ -15,7 +15,6 @@ fetch("/json/bookRound.json") //json파일 읽어오기
     data = json.bookRound; //json에 있는 items만 받아오기
 
     const bookName = document.getElementById("thisBookName").textContent;
-    console.log(bookName);
 
     let html = "";
     data.forEach((element) => {

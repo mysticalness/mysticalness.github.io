@@ -1,5 +1,4 @@
-
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
   const urlParams = new URL(location.href).searchParams;
   const name = urlParams.get("book");
   const number = urlParams.get("number");
@@ -14,14 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
   xmlhttp.send();
 
   loadFile();
-
-});
-
+};
 
 function loadFile() {
   let result = null;
   if (this.status == 200) {
     result = this.responseText;
     document.getElementById("writtenSummary").textContent = result;
-  } 
+  }
 }
