@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     
     const path = getUrlInfo();
-    const txtPath = `/text/${path}`;
+    const txtPath = `/text/${path}.txt`;
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = loadFile;
     xmlhttp.open("GET", txtPath);

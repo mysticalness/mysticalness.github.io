@@ -78,4 +78,5 @@ body {
   text-overflow: ellipsis;
   margin: 0 20px;
   cursor: pointer;
+  width: fit-content;
 }

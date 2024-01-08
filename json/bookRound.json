@@ -7,21 +7,21 @@
     },
     {
       "number" : "02",
-      "bookName" : "",
-      "content" : ""
+      "bookName" : "타입으로 견고하게 다형성으로 유연하게",
+      "content" : "1.3 타입 검사의 원리 <br> 1.4 타입 검사 결과의 활용"
     },
     {
       "number" : "03",
+      "bookName" : "타입으로 견고하게 다형성으로 유연하게",
+      "content" : "1.5 타입추론 <br> 1.6 더 세밀한 타입 <br> 1.7 정적 타입 언어의 특징 <br> 1.8 다형성"
+    },
+    {
+      "number" : "",
       "bookName" : "",
       "content" : ""
     },
     {
-      "number" : "04",
-      "bookName" : "",
-      "content" : ""
-    },
-    {
-      "number" : "05",
+      "number" : "",
       "bookName" : "",
       "content" : ""
     },
