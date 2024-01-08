@@ -8,7 +8,7 @@
 
 .bookList {
   display: grid;
-  grid-template-columns: 83% 8.5% 8.5%;
+  grid-template-columns: 82.5% 9% 8.5%;
   grid-template-rows: 1fr 1fr 1fr;
   margin: 20px;
   border: 2px solid #D9D9D9;
@@ -43,7 +43,7 @@
 
   & :nth-child(3n+2) span {
     width: 100%;
-    font-size: 2.5em;
+    font-size: 3em;
     text-align: right;
     padding: 0 10px;
   }
@@ -55,12 +55,13 @@
   }
 
   & .bookName {
+    margin: 5px 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 2.3em;
+    font-size: 2.5em;
     letter-spacing: -1.5px;
-    width: 75%;
+    width: 80%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -69,10 +70,12 @@
   & .duration {
     position: absolute;
     top: 23%;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 100;
-    border-bottom: 1px solid #D9D9D9;
-    width: 35.5%;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #D9D9D9, #65d3ff00);
+    border-image-slice: 1;
+    width: 28.2%;
     font-family: 'Times New Roman', Times, serif;
   }
 

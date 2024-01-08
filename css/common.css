@@ -51,7 +51,7 @@ body {
 
   & .thisPage {
     position: absolute;
-    background: linear-gradient(90deg, rgba(255,185,67,1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(90deg, rgba(255, 185, 67, 1) 0%, rgba(255, 255, 255, 0) 100%);
     opacity: 50%;
     width: 100px;
     height: 20px;
@@ -67,11 +67,11 @@ body {
 }
 
 #thisBookName {
-  padding: 20px 0;
+  padding: 15px 2px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 2em;
+  font-size: 2.5em;
   letter-spacing: -1.5px;
   overflow: hidden;
   white-space: nowrap;

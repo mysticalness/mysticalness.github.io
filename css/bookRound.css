@@ -22,7 +22,8 @@
 
   & .roundBox {
     cursor: pointer;
-    padding: 15px 20px;
+    padding: 15px;
+    padding-left: 20px;
     height: 100%;
     border: 2px solid #D9D9D9;
     letter-spacing: -1.5px;
@@ -33,6 +34,19 @@
     font-size: 2.5em;
     font-weight: bolder;
     padding-bottom: 25px;
+    width: 100%;
+    position: relative;
+  }
+
+  & .countLine {
+    position: absolute;
+    display: inline-block;
+    top: 59%;
+    left: 55%;
+    width: 53%;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #D9D9D9, #65d3ff00);
+    border-image-slice: 1;
   }
 
   & .range {

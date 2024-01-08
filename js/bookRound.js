@@ -19,7 +19,7 @@ fetch("/json/bookRound.json") //json파일 읽어오기
       html += `<div class="roundBox" onclick="nextContent('${element.bookName}','${element.number}')">
               <div class="roundCount">`;
       if (element.number != "") html += `${element.number}일차 `;
-      html += `</div>
+      html += `<div class="countLine"></div></div>
               <div class="range">
                 ${element.content}
               </div>
