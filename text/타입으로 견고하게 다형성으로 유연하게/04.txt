@@ -36,9 +36,9 @@
       * 상속을 하지 않았지만 필드와 메서드를 보았을 때 서브 타입일 경우
       * A가 B에 정의된 필드와 메서드를 모두 정의한다면 A는 B의 서브타입이다.
       * 객체가 가지는 필드와 메서드를 그냥 나열한 것.
-      ex) Void sendEmail ({String email;} person, String title, String content){
-                  String email  = person.email;
-                  ...
+        ex) Void sendEmail ({String email;} person, String title, String content){
+                    String email  = person.email;
+                    ...
             }
     3. 추상 메서드
       * abstract  = 클래스와 객체를 직접 만들 수 없다.
