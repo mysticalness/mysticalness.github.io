@@ -62,9 +62,9 @@ body {
   }
 }
 
-.paging {
+/* .paging {
   text-align: center;
-}
+} */
 
 #thisBookName {
   padding: 15px 2px;
@@ -80,3 +80,32 @@ body {
   cursor: pointer;
   width: fit-content;
 }
+
+.swiper-container{
+  width: 100%;
+}
+
+.swiper-slide.bookList{
+  height: unset;
+}
+
+.swiper-pagination.paging{
+  width: 100%;
+  position: unset;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet{
+  background: #fff;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background: #5fff00;
+}
+
+/* .swiper-pagination.paging div{
+  width: 50%;
+  background-color: none;
+}
+
+.swiper-pagination-bullet span{
+  color: #fff;
+} */

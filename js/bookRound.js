@@ -15,7 +15,14 @@ fetch("/json/bookRound.json") //json파일 읽어오기
     data = json.bookRound; //json에 있는 items만 받아오기
 
     let html = "";
-    data.forEach((element) => {
+    data.forEach((element, i) => {
+      let cnt = i + 1;
+
+      if (cnt % 10 == 1) {
+        html += `<div class="bookRound swiper-slide">
+                 <div class="bookRoundL">`;
+      }
+
       html += `<div class="roundBox" onclick="nextContent('${element.bookName}','${element.number}')">
               <div class="roundCount">`;
       if (element.number != "") html += `${element.number}일차 `;
@@ -24,8 +31,21 @@ fetch("/json/bookRound.json") //json파일 읽어오기
                 ${element.content}
               </div>
           </div>`;
+
+      if (cnt % 10 == 0) {
+        html += `   </div>
+                    <div>
+                      <div class="memoR">
+                        <div class="memoT">memo</div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>`;
+      }
     });
 
-    const appendHtml = document.querySelector(".bookRoundL");
+    const appendHtml = document.querySelector(".swiper-wrapper");
     appendHtml.innerHTML = html;
+
+    swp();
   });
