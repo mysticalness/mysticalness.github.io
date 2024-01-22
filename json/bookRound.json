@@ -26,14 +26,14 @@
       "content" : "2.2 집합론적 타입 <br> 2.3 함수와 서브타입"
     },
     {
-      "number" : "",
-      "bookName" : "",
-      "content" : ""
+      "number" : "06",
+      "bookName" : "타입으로 견고하게 다형성으로 유연하게",
+      "content" : "3.1 제네릭 함수 <br> 3.2 제네릭 타입"
     },
     {
-      "number" : "",
-      "bookName" : "",
-      "content" : ""
+      "number" : "07",
+      "bookName" : "타입으로 견고하게 다형성으로 유연하게",
+      "content" : "3.3 무엇이든 타입 <br> 3.4 무엇인가 타입"
     },
     {
       "number" : "",
