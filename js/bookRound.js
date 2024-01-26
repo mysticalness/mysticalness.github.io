@@ -14,10 +14,11 @@ fetch("/json/bookRound.json") //json파일 읽어오기
   .then((json) => {
     data = json.bookRound; //json에 있는 items만 받아오기
 
+    let fin = data.length;
+
     let html = "";
     data.forEach((element, i) => {
       let cnt = i + 1;
-
       if (cnt % 10 == 1) {
         html += `<div class="bookRound swiper-slide">
                  <div class="bookRoundL">`;
@@ -32,7 +33,8 @@ fetch("/json/bookRound.json") //json파일 읽어오기
               </div>
           </div>`;
 
-      if (cnt % 10 == 0) {
+
+      if (cnt % 10 == 0 || fin == cnt) {
         html += `   </div>
                     <div>
                       <div class="memoR">
