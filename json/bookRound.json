@@ -42,8 +42,8 @@
     },
     {
       "number" : "09",
-      "bookName" : "",
-      "content" : ""
+      "bookName" : "타입으로 견고하게 다형성으로 유연하게",
+      "content" : "4.3 가변성"
     },
     {
       "number" : "10",
