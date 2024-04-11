@@ -24,15 +24,18 @@ window.addEventListener("load", function () {
 });
 
 function circle(pageName) {
+  let className;
   if (
     pageName.indexOf("bookSummary.html") > -1 ||
     pageName.indexOf("bookRound.html") > -1 ||
     pageName.indexOf("bookContent.html") > -1
   ) {
-    const className = document.querySelector(".thisPage.bookCircle");
-    className.style.width = "150px";
-    className.style.visibility = "visible";
+    className = document.querySelector(".thisPage.bookCircle");
+  } else if (pageName.indexOf("aboutMe.html") > -1) {
+    className = document.querySelector(".thisPage.myCircle")
   }
+  className.style.width = "150px";
+  className.style.visibility = "visible";
 }
 
 let boxObserver = new ResizeObserver((entries, observe) => {
@@ -48,6 +51,6 @@ function targetMenu(entry, width) {
   if (width < 720)
     entry.target.innerHTML = `<div id="bookSummary"><div class="thisPage bookCircle"></div><a href="/pages/bookSummary.html">Summary</a></div>
                               <div id="techDocument">Document</div>
-                              <div id="aboutMe">Info</div>`;
+                              <div id="aboutMe"><div class="thisPage myCircle"></div><a href="/pages/aboutMe.html">Info</a></div>`;
   else entry.target.innerHTML = menuInnerHtml;
 }
