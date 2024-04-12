@@ -30,8 +30,11 @@ fetch("/json/bookRound.json") //json파일 읽어오기
       html += `<div class="countLine"></div></div>
               <div class="range">
                 ${element.content}
-              </div>
-          </div>`;
+              </div>`
+      if(fin == cnt){
+        html += `<div id="theEnd">- The End -</div>`
+      }
+      html += `</div>`;
 
 
       if (cnt % 10 == 0 || fin == cnt) {

@@ -96,4 +96,10 @@
     font-weight: 600;
   }
 
+  & #theEnd{
+    text-align: right;
+    margin-top: 70px;
+    font-weight: 530;
+  }
+
 }
