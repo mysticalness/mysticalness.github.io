@@ -23,11 +23,12 @@ body {
   width: 100%;
   /* background: linear-gradient(to top, yellow, lightGreen); */
   background-color: #3A15B5;
+  position: relative;
 }
 
 .menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 32% 32% 32% 4%;
   grid-column-gap: 5px;
   height: 25%;
   margin: 20px;
@@ -59,6 +60,39 @@ body {
     margin-left: -10px;
     border-radius: 10px;
     visibility: hidden;
+  }
+
+  #setting {
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
+}
+
+#showBox{
+  top: 8%;
+  right: 45px;
+  width: 80px;
+  position: absolute;
+  z-index: 11;
+  padding: 1.5px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  visibility: hidden;
+
+  & div {
+    cursor: pointer;
+  }
+
+  & .backToIndex {
+    font-size: 0.8em;
+    font-weight: 600;
+    height: 25px;
+    line-height: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    color: #000000;
   }
 }
 
