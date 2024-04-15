@@ -64,7 +64,7 @@ function clickHeartEvent() {
     if (ballCount > 550) {
       cancelAnimationFrame(req);
       const canvas = document.getElementsByTagName("canvas");
-      canvas[0].remove();
+      location.reload();
     }
   }
 
