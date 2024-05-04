@@ -9,7 +9,8 @@
   * 제네릭 클래스가 있을 경우, 타입들 사이의 서브타입 관계
     * ex) 리스트 구현 방법
       * 배열 리스트(array-based list)와 연결 리스트(linked list)
-
+<br>
+```
         abstract class List<T> {
           T get(Int idx);
           ...
@@ -22,17 +23,18 @@
           T get(Int idx) { ... }
           ...
         }
-
+```
       * ArrayList<T>와 LinkedList<T>는 List<T>의 서브타입.
       * extends List 대신 extends List<T>라고 작성해야 이유
         * 비트 백터(bit vector)
           * 불 리스트를 구현할 때만 사용 가능한 방식
           * List<Boolean>을 상속한다.
-
+<br>
+```
         class BitVector extends List<Boolean>{
           Boolean get(Int idx) { ... }
         }
-
+```
         * 비트 벡터와 같이 타입 인자가 특정 타입일 때만 상속하는 경우, 
           타입 검사기가 서브타입 관계를 파악하려면 각 클래스가 무엇을 상속하는지 정확히 알아야 한다.
 
@@ -46,15 +48,14 @@
 
 * 모든 타입이 가지고 있지는 않지만, 그렇다고 한 타입만 가지고 있지는 않은, 몇몇 타입이 가지고 있는 능력도 있다.
 * 타입 매개변수 T를 가진 제네릭 함수로 정의하되 T에 제한을 거는 것.
-
+<br>
+```
         T elder <T <: Person(T p, T q)>{
           return (p.age >= q.age) ? p : q;
         }
-
+```
   * T가 모든 타입이 아니라 Person의 서브타입만 나타낸다.
-  * T <: Person = 타입 매개변수 T의 상한(upper bound)을 Person으로 지정한 것.
-                = T가 최대 Person타입까지 커질 수 있다.
-                = T가 Person의 서브타입이다.
+  * T <: Person <br>= 타입 매개변수 T의 상한(upper bound)을 Person으로 지정한 것. <br>= T가 최대 Person타입까지 커질 수 있다. <br>= T가 Person의 서브타입이다.
 
         Person p = elder(p1, p2);     ----------------->    Person p = elder<Person>(p1,p2);
         Student s = elder(s1, s2);                          Student s = elder<Student>(s1,s2);
@@ -76,14 +77,16 @@
   * 재귀적 타입 매개변수 제한이 중요하고 유용한 기능인 이유
     * 대부분의 정렬 알고리즘(삽입 정렬, 병합 정렬)은 비교 정렬
       = 리스트의 원소들을 한 쌍씩 비교해 순서를 결정하는 정렬 방법.
-
+<br>
+```
         abstract class Comparable<T> {
           Boolean gt(T that);
         }
-
+```
+```
         Void sort<T <: Comparable<T>> (List<T> lst){
           ...if(Lst.get(i).gt(lst.get(j))) { ... } ...
         }
-
+```
     * T가 반드시 Comparable<T>의 서브타입이어야 한다.
     * B가 Comparable<A>의 서브타입일 때 B 타입의 값을 A 타입의 값과 비교할 수 있다.
