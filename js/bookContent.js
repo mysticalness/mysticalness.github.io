@@ -22,7 +22,10 @@ function getUrlInfo() {
 function loadFile() {
   let result = null;
   if (this.status == 200) {
-    result = this.responseText;
-    document.getElementById("writtenSummary").textContent = result;
+    result = marked.parse(this.responseText);
+    document.getElementById("writtenSummary").innerHTML = result;
   }
+
 }
+
+

@@ -5,8 +5,6 @@
   padding: 0px;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: Georgia, serif;
-  font-style: italic;
 }
 
 a {
@@ -27,6 +25,7 @@ body {
 }
 
 .menu {
+  font-family: Georgia, serif;
   display: grid;
   grid-template-columns: 32% 32% 32% 4%;
   grid-column-gap: 5px;

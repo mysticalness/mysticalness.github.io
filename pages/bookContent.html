@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/5ba13645a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/bookContent.css" />
+    <link rel="stylesheet" href="/css/github-markdown.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js'></script>
     <script src="/js/menu.js"></script>
     <script src="/js/include.js"></script>
     <script src="/js/bookContent.js"></script>
@@ -18,7 +20,7 @@
         <div w3-include-html="menu.html"></div>
       </div>
       <div id="thisBookName" onclick="history.go(-1)"></div>
-      <div class="bookContentSummary">
+      <div id="bookContentSummary" class="markdown-body">
         <div id="number"></div>
         <div id="writtenSummary"></div>
       </div>

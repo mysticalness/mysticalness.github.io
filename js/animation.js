@@ -4,7 +4,7 @@ function clickHeartEvent() {
   canvas.style.top = "5%";
   canvas.style.left = "-2.5%";
   canvas.style.zIndex = 9999;
-  canvas.width = document.querySelector(".container").clientWidth + 40;
+  canvas.width = document.querySelector(".container").clientWidth + 50;
   canvas.height = document.querySelector(".container").clientHeight;
   document.documentElement.appendChild(canvas);
   const ctx = canvas.getContext("2d");
