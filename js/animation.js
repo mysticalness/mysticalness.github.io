@@ -1,11 +1,11 @@
 function clickHeartEvent() {
   const canvas = document.createElement("canvas");
   canvas.style.position = "fixed";
-  canvas.style.top = "25%";
-  canvas.style.left = "0";
+  canvas.style.top = "5%";
+  canvas.style.left = "-2.5%";
   canvas.style.zIndex = 9999;
-  canvas.width = document.querySelector(".middle").clientWidth;
-  canvas.height = document.querySelector(".middle").clientHeight;
+  canvas.width = document.querySelector(".container").clientWidth + 40;
+  canvas.height = document.querySelector(".container").clientHeight;
   document.documentElement.appendChild(canvas);
   const ctx = canvas.getContext("2d");
 
@@ -61,7 +61,7 @@ function clickHeartEvent() {
     }
     let req = requestAnimationFrame(animate); // 다음 프레임을 실행
 
-    if (ballCount > 550) {
+    if (ballCount > 400) {
       cancelAnimationFrame(req);
       const canvas = document.getElementsByTagName("canvas");
       location.reload();

@@ -53,16 +53,8 @@ function targetMenu(entry, width) {
     entry.target.innerHTML = `<div id="bookSummary"><div class="thisPage bookCircle"></div><a href="/pages/bookSummary.html">Summary</a></div>
                               <div id="techDocument">Document</div>
                               <div id="aboutMe"><div class="thisPage myCircle"></div><a href="/pages/aboutMe.html">Info</a></div>
-                              <div onclick="showSettingMenu()">
-                                <i id="setting" class="fa-solid fa-ellipsis-vertical"></i>
+                              <div onclick="location.href = '/index.html'">
+                                <i id="setting" class="fa-solid fa-house"></i>
                               </div>`;
   else entry.target.innerHTML = menuInnerHtml;
-}
-
-function showSettingMenu(){
-  let className = document.getElementById('showBox');
-  if(className.style.visibility == "hidden" || className.style.visibility == "")
-    className.style.visibility = "visible";
-  else
-    className.style.visibility = "hidden";
 }
