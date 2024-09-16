@@ -51,7 +51,7 @@ function showPdf() {
       const pageNum = pdf._pdfInfo.numPages;
 
       // Render each page into its own canvas
-      const scale = 1;
+      const scale = window.innerWidth <= 768 ? 0.7 : 1;
 
       for (let i = 1; i <= pageNum; i++) {
         pdf.getPage(i).then((page) => {
