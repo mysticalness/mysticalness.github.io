@@ -33,6 +33,8 @@ function circle(pageName) {
     className = document.querySelector(".thisPage.bookCircle");
   } else if (pageName.indexOf("aboutMe.html") > -1) {
     className = document.querySelector(".thisPage.myCircle")
+  } else if (pageName.indexOf("technicalDocument.html") > -1) {
+    className = document.querySelector(".thisPage.techCircle")
   }
   className.style.width = "150px";
   className.style.visibility = "visible";
@@ -51,7 +53,7 @@ let boxObserver = new ResizeObserver((entries, observe) => {
 function targetMenu(entry, width) {
   if (width < 720)
     entry.target.innerHTML = `<div id="bookSummary"><div class="thisPage bookCircle"></div><a href="/pages/bookSummary.html">Summary</a></div>
-                              <div id="techDocument">Document</div>
+                              <div id="techDocument"><div class="thisPage bookCircle"></div><a href="/pages/technicalDocument.html">Document</a></div>
                               <div id="aboutMe"><div class="thisPage myCircle"></div><a href="/pages/aboutMe.html">Info</a></div>
                               <div onclick="location.href = '/index.html'">
                                 <i id="setting" class="fa-solid fa-house"></i>
