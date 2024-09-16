@@ -36,7 +36,35 @@ fetch("/json/techDocument.json") //json파일 읽어오기
 
 function showPdf() {
   document.querySelector(".pdf-container").style.display = "block";
-  PDFObject.embed("/pdf/kbsCardNews.pdf", "#my-pdf");
+
+  const url = "pdf/kbsCardNews.pdf";
+
+  // Asynchronously download PDF.
+  pdfjsLib
+    .getDocument(url)
+    .promise.then((pdf) => {
+      // Fetch the first page.
+      pdf.getPage(1).then((page) => {
+        const scale = 1.5;
+        const viewport = page.getViewport({ scale });
+
+        // Prepare canvas using PDF page dimensions.
+        const canvas = document.getElementById("my-pdf");
+        const context = canvas.getContext("2d");
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        // Render PDF page into canvas context.
+        const renderContext = {
+          canvasContext: context,
+          viewport: viewport,
+        };
+        page.render(renderContext);
+      });
+    })
+    .catch((error) => {
+      console.error("Error loading PDF:", error);
+    });
 }
 
 function closePdf() {
