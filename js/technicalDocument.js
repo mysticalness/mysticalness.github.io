@@ -35,32 +35,45 @@ fetch("/json/techDocument.json") //json파일 읽어오기
   });
 
 function showPdf() {
-  document.querySelector(".pdf-container").style.display = "block";
+  const pdfContainer = document.querySelector(".pdf-container");
+  document.querySelector(".thisIsPdf").style.display = "block";
 
-  const url = "pdf/kbsCardNews.pdf";
+  const url = "../pdf/kbsCardNews.pdf";
+
+  // Clear existing canvases (if any)
+  pdfContainer.innerHTML = "";
 
   // Asynchronously download PDF.
   pdfjsLib
     .getDocument(url)
     .promise.then((pdf) => {
-      // Fetch the first page.
-      pdf.getPage(1).then((page) => {
-        const scale = 1.5;
-        const viewport = page.getViewport({ scale });
+      console.log(pdf._pdfInfo.numPages);
+      const pageNum = pdf._pdfInfo.numPages;
 
-        // Prepare canvas using PDF page dimensions.
-        const canvas = document.getElementById("my-pdf");
-        const context = canvas.getContext("2d");
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+      // Render each page into its own canvas
+      const scale = 1;
 
-        // Render PDF page into canvas context.
-        const renderContext = {
-          canvasContext: context,
-          viewport: viewport,
-        };
-        page.render(renderContext);
-      });
+      for (let i = 1; i <= pageNum; i++) {
+        pdf.getPage(i).then((page) => {
+          const viewport = page.getViewport({ scale });
+
+          // Create a new canvas for each page
+          const canvas = document.createElement("canvas");
+          const context = canvas.getContext("2d");
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          // Append canvas to container
+          pdfContainer.appendChild(canvas);
+
+          // Render PDF page into canvas context
+          const renderContext = {
+            canvasContext: context,
+            viewport: viewport,
+          };
+          page.render(renderContext);
+        });
+      }
     })
     .catch((error) => {
       console.error("Error loading PDF:", error);
@@ -68,5 +81,7 @@ function showPdf() {
 }
 
 function closePdf() {
-  document.querySelector(".pdf-container").style.display = "none";
+  document.querySelector(".thisIsPdf").style.display = "none";
+  const pdfContainer = document.querySelector(".pdf-container");
+  pdfContainer.innerHTML = "";
 }
