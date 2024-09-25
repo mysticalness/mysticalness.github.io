@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {  
   const txtPath = `/text/자기소개서/story.txt`;
   let xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = loadFile;
