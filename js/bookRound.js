@@ -1,6 +1,8 @@
+let name = "";
+
 window.onload = function () {
   const urlParams = new URL(location.href).searchParams;
-  const name = urlParams.get("book");
+  name = urlParams.get("book");
 
   document.getElementById("thisBookName").textContent = `${name}`;
 };
@@ -12,7 +14,9 @@ function nextContent(name, number) {
 fetch("/json/bookRound.json") //json파일 읽어오기
   .then((response) => response.json()) //읽어온 데이터를 json으로 변환
   .then((json) => {
-    data = json.bookRound; //json에 있는 items만 받아오기
+    data = ""; //json에 있는 items만 받아오기
+    if (name.includes("타입으로 견고하게")) data = json.bookRound;
+    else if (name.includes("모던 리액트")) data = json.bookRound2;
 
     let fin = data.length;
 
@@ -30,12 +34,11 @@ fetch("/json/bookRound.json") //json파일 읽어오기
       html += `<div class="countLine"></div></div>
               <div class="range">
                 ${element.content}
-              </div>`
-      if(fin == cnt){
-        html += `<div id="theEnd">- The End -</div>`
+              </div>`;
+      if (fin == cnt) {
+        html += `<div id="theEnd">- The End -</div>`;
       }
       html += `</div>`;
-
 
       if (cnt % 10 == 0 || fin == cnt) {
         html += `   </div>

@@ -1,22 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
-    const path = getUrlInfo();
-    const txtPath = `/text/${path}.txt`;
-    let xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = loadFile;
-    xmlhttp.open("GET", txtPath);
-    xmlhttp.send();
+  const path = getUrlInfo();
+  const txtPath = `/text/${path}.txt`;
+  let xmlhttp = new XMLHttpRequest();
+  xmlhttp.onload = loadFile;
+  xmlhttp.open("GET", txtPath);
+  xmlhttp.send();
 
-    loadFile();
+  loadFile();
 });
 
 function getUrlInfo() {
-    const urlParams = new URL(location.href).searchParams;
-    const name = urlParams.get("book");
-    const number = urlParams.get("number");
-    document.getElementById("thisBookName").textContent = `${name}`;
-    document.getElementById("number").textContent = `${number}.`;
-    return `${name}/${number}`;  
+  const urlParams = new URL(location.href).searchParams;
+  const name = urlParams.get("book");
+  const number = urlParams.get("number");
+  document.getElementById("thisBookName").textContent = `${name}`;
+  document.getElementById("number").textContent = `${number}.`;
+  return `${name}/${number}`;
 }
 
 function loadFile() {
@@ -25,7 +24,4 @@ function loadFile() {
     result = marked.parse(this.responseText);
     document.getElementById("writtenSummary").innerHTML = result;
   }
-
 }
-
-

@@ -55,5 +55,22 @@
       "bookName" : "타입으로 견고하게 다형성으로 유연하게",
       "content" : "5.3 타입클래스 <br> 5.4 카인드(Kind)"
     }
+  ],
+  "bookRound2":  [
+    {
+      "number" : "01",
+      "bookName" : "모던 리액트 Deep Dive",
+      "content" : "들어가며"
+    },
+    {
+      "number" : "02",
+      "bookName" : "모던 리액트 Deep Dive",
+      "content" : ""
+    },
+    {
+      "number" : "03",
+      "bookName" : "",
+      "content" : ""
+    }
   ]
 }

@@ -9,72 +9,12 @@
       "bookImgLink": "https://ebook.insightbook.co.kr/book/152"
     },
     {
-      "number" : "01",
-      "part" : "first_items",
-      "bookName": "타입으로 견고하게 다형성으로 유연하게",
-      "duration": "2023.12.26 - 2024.01.11",
-      "bookImg": "/images/타입으로 견고하게 다형성으로 유연하게.jpg",
-      "bookImgLink": "https://ebook.insightbook.co.kr/book/152"
-    },
-    {
-      "number" : "01",
-      "part" : "first_items",
-      "bookName": "타입으로 견고하게 다형성으로 유연하게",
-      "duration": "2023.12.26 - 2024.01.11",
-      "bookImg": "/images/타입으로 견고하게 다형성으로 유연하게.jpg",
-      "bookImgLink": "https://ebook.insightbook.co.kr/book/152"
-    },
-    {
-      "number" : "01",
-      "part" : "first_items",
-      "bookName": "타입으로 견고하게 다형성으로 유연하게",
-      "duration": "2023.12.26 - 2024.01.11",
-      "bookImg": "/images/타입으로 견고하게 다형성으로 유연하게.jpg",
-      "bookImgLink": "https://ebook.insightbook.co.kr/book/152"
-    }
-    ,
-    {
-      "number" : "01",
-      "part" : "first_items",
-      "bookName": "타입으로 견고하게 다형성으로 유연하게",
-      "duration": "2023.12.26 - 2024.01.11",
-      "bookImg": "/images/타입으로 견고하게 다형성으로 유연하게.jpg",
-      "bookImgLink": "https://ebook.insightbook.co.kr/book/152"
-    }
-    ,
-    {
-      "number" : "01",
-      "part" : "first_items",
-      "bookName": "타입으로 견고하게 다형성으로 유연하게",
-      "duration": "2023.12.26 - 2024.01.11",
-      "bookImg": "/images/타입으로 견고하게 다형성으로 유연하게.jpg",
-      "bookImgLink": "https://ebook.insightbook.co.kr/book/152"
-    }
-  ],
-  "bookInfo_2": [
-    {
-      "number" : "01",
-      "part" : "first_items",
-      "bookName": "타입으로 견고하게 다형성으로 유연하게",
-      "duration": "2023.12.26 - 2024.01.11",
-      "bookImg": "/images/타입으로 견고하게 다형성으로 유연하게.jpg",
-      "bookImgLink": "https://www.yes24.com/Product/Goods/122890814"
-    },
-    {
       "number" : "02",
       "part" : "second_items",
-      "bookName": "타입으로 견고하게 다형성으로 유연하게",
-      "duration": "2023.12.26 - 2024.01.11",
-      "bookImg": "/images/타입으로 견고하게 다형성으로 유연하게.jpg",
-      "bookImgLink": "https://www.yes24.com/Product/Goods/122890814"
-    },
-    {
-      "number" : "03",
-      "part" : "third_items",
-      "bookName": "타입으로 견고하게 다형성으로 유연하게",
-      "duration": "2023.12.26 - 2024.01.11",
-      "bookImg": "/images/타입으로 견고하게 다형성으로 유연하게.jpg",
-      "bookImgLink": "https://www.yes24.com/Product/Goods/122890814"
+      "bookName": "모던 리액트 Deep Dive",
+      "duration": "2024.09.20 -",
+      "bookImg": "/images/모던 리액트 Deep Dive.jpg",
+      "bookImgLink": "https://wikibook.co.kr/react-deep-dive/"
     }
   ]
 }
