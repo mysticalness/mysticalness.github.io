@@ -56,13 +56,18 @@
   }
 
 
+  & .bookName{
+    width: 80%;
+  }
+
   & .bookName,
   & .duration,
   & .documentName {
     display: inline-block;
   }
 
-  & .bookName,
+
+  & .bookName a,
   & .documentName {
     margin: 5px 15px;
     font-family: Arial, Helvetica, sans-serif;

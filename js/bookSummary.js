@@ -12,9 +12,7 @@ fetch("/json/bookSummary.json") //json파일 읽어오기
       }
 
       html += `<div class="_items ${element.part}">
-                    <a href="/pages/bookRound.html?book=${element.bookName}">
-                      <div class="bookName">${element.bookName}</div>
-                    </a>
+                    <div class="bookName"><a href="/pages/bookRound.html?book=${element.bookName}">${element.bookName}</a></div>
                     <div class="duration">${element.duration}</div>
                 </div>
                 <div class="_items ${element.part}">
