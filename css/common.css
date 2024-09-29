@@ -24,6 +24,10 @@ body {
   position: relative;
 }
 
+.container{
+  width: 100%;
+}
+
 .menu {
   font-family: Georgia, serif;
   display: grid;
