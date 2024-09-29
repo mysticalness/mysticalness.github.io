@@ -1,0 +1,50 @@
+## JSX란?
+
+* 리액트에서만 사용하지 않는다.
+* 내장형 구문
+* 리액트에 종속적 X, 독자적 O
+* 페이스북이 임의로 만든 새로운 문법
+* 트랜스파일러를 거쳐야 한다.
+* XML 스타일의 트리 구문을 작성하는데 많은 도움을 주는 새로운 문법
+
+
+### JSX의 정의 (4가지 컴포넌트)
+
+* JSXElement
+  * JSX를 구성하는 가장 기본 요소
+  * HTML의 요소와 비슷한 역할
+  * P.118 참조
+* JSXElementName
+  * JSXElement의 요소 이름으로 쓸 수 있는 것
+  * JSXIdentifier
+  * JSXNamespacedName
+  * JSXMemberExpression
+* JSXAttributes
+  * JSXElement에 부여할 수 있는 속성
+  * 필수값이 아님.
+  * JSXSpreadAttributes
+  * JSXAttribute
+    * JSXAttributeName
+    * JSXAttributeValue
+* JSXChildren
+  * JSXElement의 자식값.
+  * JSXText
+  * JSXElement
+  * JSXFragment
+  * { JSXChildExpression (optional) }
+
+
+
+  * JSXStrings
+    * HTML과 JSX 사이에 복사와 붙여넣기를 쉽게 할 수 있도록 설계
+
+
+### JSX 예제 
+(p.122)
+
+
+### JSX는 어떻게 자바스크립트에서 변환될까?
+* JSX를 변환하는 플러그인
+	* @bable/plugin-transform-react-jsx
+
+

@@ -98,9 +98,9 @@
       "content" : "1.7 선택이 아닌 필수, 타입스크립트"
     },
     {
-      "number" : "",
-      "bookName" : "",
-      "content" : ""
+      "number" : "09",
+      "bookName" : "모던 리액트 Deep Dive",
+      "content" : "2.1 JSX란?"
     },
     {
       "number" : "",
