@@ -14,7 +14,20 @@ body{
 
 /*index*/
 .middle {
-  grid-template-rows: 60% 40%;
+  display: block;
+}
+
+#comment {
+  text-align: center;
+}
+
+.othersites {
+  margin : -10% auto;
+}
+
+#profilePhoto {
+  min-height: 60%;
+  height: 60%;
 }
 
 /* menu */
