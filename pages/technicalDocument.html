@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/common.css" />
   <link rel="stylesheet" href="/css/bookSummary.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+  <link rel="stylesheet" media="all and (max-width: 500px)" href="/css/adaptive.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
   <script src="/js/technicalDocument.js"></script>
   <script src="/js/menu.js"></script>
@@ -21,7 +22,8 @@
 <body>
   <div class="container">
     <div>
-      <div w3-include-html="menu.html"></div>
+      <div id="menuId" w3-include-html="menu.html"></div>
+      <div id="menuId2" w3-include-html="resizeMenu.html"></div>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper"></div>

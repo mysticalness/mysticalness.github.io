@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/bookContent.css" />
     <link rel="stylesheet" href="/css/github-markdown.css">
+    <link rel="stylesheet" media="all and (max-width: 500px)" href="/css/adaptive.css" />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js'></script>
     <script src="/js/menu.js"></script>
     <script src="/js/include.js"></script>
@@ -17,7 +18,8 @@
   <body>
     <div class="container">
       <div>
-        <div w3-include-html="menu.html"></div>
+        <div id="menuId" w3-include-html="menu.html"></div>
+        <div id="menuId2" w3-include-html="resizeMenu.html"></div>
       </div>
       <div id="thisBookName" onclick="history.go(-1)"></div>
       <div id="bookContentSummary" class="markdown-body">

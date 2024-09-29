@@ -8,20 +8,22 @@
     <script src="https://kit.fontawesome.com/5ba13645a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/bookSummary.css" />
+    <link rel="stylesheet" media="all and (max-width: 500px)" href="/css/adaptive.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css"
     />
-    <script src="/js/menu.js"></script>
     <script src="/js/include.js"></script>
     <script src="/js/bookSummary.js"></script>
     <script src="/js/pagingSwiper.js"></script>
+    <script src="/js/menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div>
-        <div w3-include-html="menu.html"></div>
+        <div id="menuId" w3-include-html="menu.html"></div>
+        <div id="menuId2" w3-include-html="resizeMenu.html"></div>
       </div>
       <div class="swiper-container">
         <div class="swiper-wrapper"></div>

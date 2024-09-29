@@ -1,62 +1,44 @@
 let menuInnerHtml;
 let pageName;
-let time;
 
 document.addEventListener("DOMContentLoaded", function () {
   includeHTML();
 
+  let width = window.innerWidth;
+
+  if (width < 501) {
+    document.getElementById("menuId").style.display = "none";
+    document.getElementById("menuId2").style.display = "block";
+  }
+
   pageName = location.pathname;
 
-  const start = window.performance.now();
-  for (let i = 0, sum = 0; i < 10000; i++) {
-    sum += i;
+});
+
+window.addEventListener("resize", function () {
+  let width = window.innerWidth;
+  if (width < 510 && width > 300) {
+    document.getElementById("menuId").style.display = "none";
+    document.getElementById("menuId2").style.display = "block";
+  } else if ((width > 510 && width < 700) || width > 1000) {
+    document.getElementById("menuId").style.display = "block";
+    document.getElementById("menuId2").style.display = "none";
   }
-  const end = window.performance.now();
-  time = end - start;
 });
 
-window.addEventListener("load", function () {
-  setTimeout(() => {
-    const box = document.querySelector(".menu");
-    menuInnerHtml = box.innerHTML;
-    boxObserver.observe(box);
-  }, time * 500);
-});
-
-function circle(pageName) {
-  let className;
+function showCircle(pageName) {
+  let className = null;
+  
   if (
-    pageName.indexOf("bookSummary.html") > -1 ||
-    pageName.indexOf("bookRound.html") > -1 ||
-    pageName.indexOf("bookContent.html") > -1
+    pageName.includes("bookSummary") ||
+    pageName.includes("bookRound") ||
+    pageName.includes("bookContent")
   ) {
-    className = document.querySelector(".thisPage.bookCircle");
-  } else if (pageName.indexOf("aboutMe.html") > -1) {
-    className = document.querySelector(".thisPage.myCircle")
-  } else if (pageName.indexOf("technicalDocument.html") > -1) {
-    className = document.querySelector(".thisPage.techCircle")
+    className = document.querySelector(".bookCircle");
+  } else if (pageName.includes("technicalDocument")) {
+    className = document.querySelector(".techCircle");
+  } else if (pageName.includes("aboutMe")) {
+    className = document.querySelector(".myCircle");
   }
-  className.style.width = "150px";
-  className.style.visibility = "visible";
-}
-
-let boxObserver = new ResizeObserver((entries, observe) => {
-  for (let entry of entries) {
-    const cr = entry.contentRect;
-    const targetName = entry.target.className;
-    if (targetName == "menu") targetMenu(entry, cr.width);
-  }
-  if(pageName.indexOf("index.html") != 1)
-    circle(pageName);
-});
-
-function targetMenu(entry, width) {
-  if (width < 720)
-    entry.target.innerHTML = `<div id="bookSummary"><div class="thisPage bookCircle"></div><a href="/pages/bookSummary.html">Summary</a></div>
-                              <div id="techDocument"><div class="thisPage bookCircle"></div><a href="/pages/technicalDocument.html">Document</a></div>
-                              <div id="aboutMe"><div class="thisPage myCircle"></div><a href="/pages/aboutMe.html">Info</a></div>
-                              <div onclick="location.href = '/index.html'">
-                                <i id="setting" class="fa-solid fa-house"></i>
-                              </div>`;
-  else entry.target.innerHTML = menuInnerHtml;
+  
 }

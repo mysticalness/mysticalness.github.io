@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {  
+document.addEventListener("DOMContentLoaded", function () {
   const txtPath = `/text/자기소개서/story.txt`;
   let xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = loadFile;
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadFile() {
   let result = null;
   if (this.status == 200) {
-    result = this.responseText;
-    document.getElementById("story1").textContent = result;
+    result = marked.parse(this.responseText);
+    document.getElementById("story1").innerHTML = result;
   }
 }

@@ -1,0 +1,116 @@
+* {
+  font-size: 13px;
+  white-space: normal !important;
+}
+
+
+/*index*/
+.middle {
+  grid-template-rows: 60% 40%;
+}
+
+
+/* menu */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 30%) 10%;
+  grid-column-gap: 2px;
+  align-items: center;
+  height: 45px;
+  line-height: 45px;
+
+  #setting {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+  }
+
+  .thisPage {
+    width: 70px !important;
+  }
+}
+
+
+/*bookSummary*/
+.swiper-slide.bookList {
+  display: block;
+  overflow-y: auto;
+
+  .bookName {
+    width: 95%;
+
+    a {
+      font-size: 1.5rem;
+      display: block;
+    }
+  }
+
+  .duration {
+    position: unset;
+    width: 100%;
+    text-align: right;
+  }
+
+  ._items:first-child {
+    height: auto;
+  }
+
+  ._items:nth-child(3n) {
+    height: 60%;
+  }
+}
+
+
+/*bookRound*/
+#thisBookName {
+  overflow: visible;
+  padding: 0px 7px;
+}
+
+.bookRound,
+.bookRoundL {
+  display: block !important;
+}
+
+.bookRound {
+  overflow-y: auto;
+}
+
+.bookRoundL {
+  height: 200px;
+}
+
+.memoR {
+  display: none;
+}
+
+#bookContentSummary {
+  padding: 30px;
+  overflow-x: hidden;
+}
+
+#number {
+  text-align: left;
+}
+
+.aboutMeContent {
+  padding: 50px 20px;
+}
+
+
+.swiper-slide.bookList::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-slide.bookList::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 10px solid rgba(0, 0, 0, 0.18);
+  border-left: 0;
+  border-right: 0;
+  background-color: #50FBDF;
+}
+
+.swiper-slide.bookList::-webkit-scrollbar-track {
+  border-radius: 100px;
+  background-color: rgb(197, 197, 197);
+}

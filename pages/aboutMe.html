@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/5ba13645a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/common.css"/>
     <link rel="stylesheet" href="/css/aboutMe.css"/>
+    <link rel="stylesheet" media="all and (max-width: 500px)" href="/css/adaptive.css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js'></script>
     <script src="/js/menu.js"></script>
     <script src="/js/include.js"></script>
     <script src="/js/aboutMe.js"></script>
@@ -15,7 +17,8 @@
   <body>
     <div class="container">
       <div>
-        <div w3-include-html="menu.html"></div>
+        <div id="menuId" w3-include-html="menu.html"></div>
+        <div id="menuId2" w3-include-html="resizeMenu.html"></div>
       </div>
       <div class="aboutMeContent">
         <div id="number">Self-Introduction</div>
