@@ -5,18 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   includeHTML();
 
   let width = window.innerWidth;
-
-  if (width < 501) {
-    document.getElementById("menuId").style.display = "none";
-    document.getElementById("menuId2").style.display = "block";
-  }
-
   pageName = location.pathname;
-
+  underFiveHundred(width) 
 });
 
 window.addEventListener("resize", function () {
   let width = window.innerWidth;
+  underFiveHundred(width);
   if (width < 510 && width > 300) {
     document.getElementById("menuId").style.display = "none";
     document.getElementById("menuId2").style.display = "block";
@@ -26,9 +21,16 @@ window.addEventListener("resize", function () {
   }
 });
 
+function underFiveHundred(width) {
+  if (width < 501) {
+    document.getElementById("menuId").style.display = "none";
+    document.getElementById("menuId2").style.display = "block";
+  }
+}
+
 function showCircle(pageName) {
   let className = null;
-  
+
   if (
     pageName.includes("bookSummary") ||
     pageName.includes("bookRound") ||
@@ -40,5 +42,4 @@ function showCircle(pageName) {
   } else if (pageName.includes("aboutMe")) {
     className = document.querySelector(".myCircle");
   }
-
 }
