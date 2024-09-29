@@ -3,15 +3,6 @@
   white-space: normal !important;
 }
 
-body{
-  margin: 0px;
-  width: 100%;
-}
-
-.container {
-  width: auto;
-}
-
 /*index*/
 .middle {
   display: block;
