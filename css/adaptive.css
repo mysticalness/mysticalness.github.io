@@ -3,12 +3,21 @@
   white-space: normal !important;
 }
 
+body{
+  margin: 0px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
 /*index*/
 .middle {
   grid-template-rows: 60% 40%;
 }
-
 
 /* menu */
 .menu {
