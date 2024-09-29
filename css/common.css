@@ -58,6 +58,7 @@ body {
     top: 11px;
     margin-left: -10px;
     border-radius: 10px;
+    visibility: hidden;
   }
 
   #setting {

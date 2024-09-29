@@ -40,5 +40,5 @@ function showCircle(pageName) {
   } else if (pageName.includes("aboutMe")) {
     className = document.querySelector(".myCircle");
   }
-  
+
 }
