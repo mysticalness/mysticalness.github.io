@@ -1,13 +1,13 @@
 let menuInnerHtml;
-let pageName;
+let pageName = location.pathname;
 
 document.addEventListener("DOMContentLoaded", function () {
   includeHTML();
-
   let width = window.innerWidth;
-  pageName = location.pathname;
   underFiveHundred(width) 
 });
+
+
 
 window.addEventListener("resize", function () {
   let width = window.innerWidth;
@@ -28,18 +28,7 @@ function underFiveHundred(width) {
   }
 }
 
-function showCircle(pageName) {
-  let className = null;
+function showCircle() {
 
-  if (
-    pageName.includes("bookSummary") ||
-    pageName.includes("bookRound") ||
-    pageName.includes("bookContent")
-  ) {
-    className = document.querySelector(".bookCircle");
-  } else if (pageName.includes("technicalDocument")) {
-    className = document.querySelector(".techCircle");
-  } else if (pageName.includes("aboutMe")) {
-    className = document.querySelector(".myCircle");
-  }
+
 }
