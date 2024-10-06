@@ -123,14 +123,14 @@
       "content" : "2.5 컴포넌트와 함수의 무거운 연산을 기억해 두는 메모이제이션"
     },
     {
-      "number" : "",
-      "bookName" : "",
+      "number" : "14",
+      "bookName" : "모던 리액트 Deep Dive",
       "content" : ""
     },
     {
-      "number" : "",
-      "bookName" : "",
-      "content" : ""
+      "number" : "15",
+      "bookName" : "모던 리액트 Deep Dive",
+      "content" : "3.2 사용자 정의 훅과 고차 컴포넌트 중 무엇을 써야 할까?"
     },
     {
       "number" : "",
