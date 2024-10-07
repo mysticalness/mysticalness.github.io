@@ -133,9 +133,9 @@
       "content" : "3.2 사용자 정의 훅과 고차 컴포넌트 중 무엇을 써야 할까?"
     },
     {
-      "number" : "",
-      "bookName" : "",
-      "content" : ""
+      "number" : "16",
+      "bookName" : "모던 리액트 Deep Dive",
+      "content" : "4.1 서버 사이드 렌더링이란?"
     },
     {
       "number" : "",
