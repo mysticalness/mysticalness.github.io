@@ -1,0 +1,41 @@
+## 서버 사이드 렌더링을 위한 리액트 API 살펴보기
+
+### renderToString
+* 서버 사이드 렌더링을 구현하는데 가장 기초적인 API
+* 인수로 넘겨받은 리액트 컴포넌트를 렌더링 → HTML 문자열로 반환하는 함수
+* 자바스크립트 코드를 포함 X, 렌더링하는 역할 X
+* 웹페이지가 사용자와 인터랙션할 준비가 되기 위해서는? 별도로 자바스크립트 코드를 모두 다운로드, 파싱, 실행하는 과정을 거쳐야 한다.
+* data-reactroot
+   * 리액트 컴포넌트의 루트 엘리먼트가 무엇인지 식별하는 역할
+   * hydrate 함수에서 루트를 식별하는 기준점
+
+
+
+### renderToStaticMarkup
+* renderToString과 유사 but data-reactroot와 같은 리액트에서만 사용하는 추가적인 DOM 속성을 만들지 않는다.
+  * renderToString과 공통점 : 리액트 컴포넌트를 기준으로 HTML 문자열을 만든다.
+  * HTML의 크기를 아주 약간 줄일 수 있다는 장점
+  * renderToStringMarkup의 결과물 = hydrate를 수행하지 않는다는 가정하에 `순수한 HTML만 반환`
+
+
+### renderToNodeStream
+* renderToString과 결과물이 완전히 동일
+* renderToString과 두 가지 차이점
+    1. renderToNodeStream은 브라우저에서 사용하는 것이 완전히 불가능
+	      * Node.js환경에 의존하기 때문
+    2. 결과물의 타입
+        * renderToString : String
+        * renderToNodeStream : Node.js의 ReadableStream, 바이트 스트림, Node.js, Deno, Bun과 같은 서버 환경에서만 사용할 수 있음. String을 얻기 위해서는? 추가적인 처리가 필요
+
+* 스트림을 활용하면 큰 데이터를 데이터 청크(chunk, 작은 단위)로 분할해 조금씩 가져와서 순차적으로 처리할 수 있다는 장점이 있다. → 리액트 애플리케이션을 렌더링하는 Node.js 서버의 부담을 덜 수 있다.
+
+
+### renderToStaticNodeStream
+* renderToNodeStream과 제공하는 결과물은 동일 but 리액트 속성이 제공되지는 않음.
+* hydrate를 할 필요 없는 순수 HTML 결과물이 필요할 때 사용하는 메서드
+
+
+### hydrate
+* 정적으로 생성된 HTML에 이벤트와 핸들러를 붙여 완전한 웹페이지 결과물을 만듦.
+* 이미 렌더링된 HTML이 있다는 가정하에 작업이 수행
+* 렌더링된 HTML을 기준으로 이벤트를 붙이는 작업만 실행
